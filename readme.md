@@ -11,10 +11,16 @@ Em meio aos meus estudos de javascript decidi me desafiar e colocar em prática 
 
 Decidi recriar um jogo que eu gosto muito chamado "Termo" e esse foi o resultado.
 
+## | Importante | ❌
+
+<strong>Projeto em andamento</strong>
+
+- A tela ainda não está responsiva.
+- O teclado virtual ainda não está funcional.
+
 ## | Visualize o projeto |
 
-🔗  🔗
-
+🔗 https://jogo-das-palavras-tan.vercel.app/ 🔗
 
 ## | Techs |
 
