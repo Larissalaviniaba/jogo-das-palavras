@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo das palavras</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="modal-tutorial">
+        <div class="scroll">
+            <p>Descubra a palavra certa em 6 tentativas. A cada tentativa as palavras certas serão sinalizadas.</p>
+            <div class="groupinput">
+                <!--Palavra correta "COLHO"-->
+                <div class="word-example">
+                    <span class="sucess">C</span>
+                    <span>A</span>
+                    <span>R</span>
+                    <span>T</span>
+                    <span>A</span>
+                </div>
+                <div class="info-example">
+                    <p>A letra <span class="sucess">C</span> faz parte da palavra e está na posição correta.</p>
+                </div>
+            </div>
+            <div class="groupinput">
+                <!--Palavra correta "COLHO"-->
+                <div class="word-example">
+                    <span>C</span>
+                    <span>O</span>
+                    <span>L</span>
+                    <span>H</span>
+                    <span class="fail">E</span>
+                </div>
+                <div class="info-example">
+                    <p>A letra <span class="fail">E</span> não faz parte da palavra.</p>
+                </div>
+            </div>
+            <div class="groupinput">
+                <!--Palavra correta "COLHO"-->
+                <div class="word-example">
+                    <span class="other">L</span>
+                    <span>E</span>
+                    <span>T</span>
+                    <span>R</span>
+                    <span>A</span>
+                </div>
+                <div class="info-example">
+                    <p>A letra <span class="other">L</span> faz parte da palavra mas não está na posição correta.</p>
+                </div>
+            </div>
+            <p>As palavras podem possuir letras repetidas.</p>
+        </div>
+    </div>
+    <div class="modal_ganhou">
+        <div class="modal-endgame">
+
+            <h1>Parebéns 🎉</h1>
+            <p>Incrivel! Você acertou a palavra.</p>
+            <div class="wrapper-button">
+                <button class="button_modal" type="button">Fechar</button>
+            </div>
+    
+        </div>
+    </div>
+    <div class="modal_perdeu">
+        <div class="modal-endgame">
+
+            <h1>Não foi dessa vez 🙁</h1>
+            <p>Uma pena! As tentativas acabaram.</p>
+            <div class="wrapper-button">
+                <button class="button_modalPerdeu" type="button">Fechar</button>
+            </div>
+    
+        </div>
+    </div>
+    <header class="header">
+        <button class="material-icons icon-help">help</button>
+        <h1 class="header__title">Jogo das Palavras</h1>
+    </header>
+    <main class="main">
+        <form id="foco" action="">
+            <div class="row-1 selecionado">
+                <input 
+                type="text"  
+                class="box"
+                data-resposta="r"
+                maxlength="1"
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta="a"
+                maxlength="1"
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta="i"
+                maxlength="1"
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta="o"
+                maxlength="1"
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta="s"
+                maxlength="1"
+                ></input>
+            </div>
+            <div class="row-2">
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+            </div>
+            <div class="row-3">
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+            </div>
+            <div class="row-4">
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+            </div>
+            <div class="row-5">
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+            </div>
+            <div class="row-6">
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+                <input 
+                type="text"  
+                class="box"
+                data-resposta=""
+                maxlength="1"
+                disabled
+                ></input>
+            </div>
+        </form>
+        <!--Teclado Virtual-->
+        <div class="teclado_linha">
+
+        </div>
+        <div class="teclado_linha">
+
+        </div>
+        <div class="teclado_linha">
+            
+        </div>
+        
+        <!--Teclado Virtual-->
+        <div class="jogarNovamente">
+            
+        </div>
+        
+    </main>
+</div>
+    
+<script src="./index.js"></script>
+</body>
+</html>

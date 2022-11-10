@@ -1,0 +1,25 @@
+.teclado_linha{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+}
+
+.teclado__letra{
+    all: unset;
+    width: 50px;
+    border: 3px solid  #413a3d;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1px 1px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    background-color:  #413a3d;
+}
+
+.teclado__letra:active{
+    border:3px solid #413a3d;
+    background-color: #413a3d;
+}
