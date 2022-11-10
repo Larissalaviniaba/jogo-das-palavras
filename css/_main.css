@@ -64,21 +64,3 @@
     background-color: transparent;
 }
 
-.novoJogo {
-    position: relative;
-    left: 410px;
-    bottom: 65px;
-    border-radius: 15%;
-    background-color: #453953;
-    color:antiquewhite;
-    border: 3px solid #453953;
-    padding: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer; 
-    margin-top: 10px;
-}
-.novoJogo:hover {
-    background-color: #3d3248;
-    border: 3px solid #3d3248;
-}

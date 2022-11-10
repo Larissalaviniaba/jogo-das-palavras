@@ -19,9 +19,6 @@ let button = "";
 let arrayInputs = [inputs, inputs2, inputs3, inputs4, inputs5, inputs6];
 let palavra = "";
 let linhaPerdeu = 0;
-let novoJogo = document.querySelector(".jogarNovamente");
-let jogarNovamente = false;
-let buttonNovoJogo = document.querySelector(".novoJogo");
 
 // Adiciona dinamicamente a palavra que o usuario precisa advinhar
 function palavraOculta(palavraOculta) {
@@ -248,30 +245,11 @@ function ganhou() {
           modalPerdeu.style.display = "block";
         }, 500);
       }
-      buttonModalPerdeu.addEventListener("click", () => {
-        modalPerdeu.style.display = "none";
-        jogarNovamente = true;
-        if (jogarNovamente) {
-          console.log("ola");
-          novoJogo.innerHTML = `<button class="novoJogo">Jogar novamente</button>`;
-        }
-      });
     } else {
       setTimeout(() => {
         modalGanhou.style.display = "block";
       }, 500);
     }
-  });
-  buttonModal.addEventListener("click", () => {
-    modalGanhou.style.display = "none";
-    jogarNovamente = true;
-    if (jogarNovamente) {
-      console.log("ola");
-      novoJogo.innerHTML = `<button class="novoJogo">Jogar novamente</button>`;
-    }
-    buttonNovoJogo.addEventListener("click", () => {
-      window.location.reload();
-    });
   });
 }
 
